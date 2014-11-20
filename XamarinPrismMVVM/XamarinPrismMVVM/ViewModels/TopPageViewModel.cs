@@ -16,6 +16,7 @@ using Microsoft.Practices.Prism.Commands;
 using Microsoft.Practices.Prism.Mvvm;
 using System.Windows.Input;
 using Microsoft.Practices.Unity;
+using Xamarin.Forms;
 using XamarinPrismMVVM.Models;
 
 namespace XamarinPrismMVVM.ViewModels
@@ -64,7 +65,7 @@ namespace XamarinPrismMVVM.ViewModels
         /// </summary>
         public ICommand AddCommand
         {
-            get { return this.addCommand ?? (this.addCommand = new DelegateCommand(this.Add, this.CanAdd)); }
+            get { return this.addCommand ?? (this.addCommand = new Command(this.Add, this.CanAdd)); }
         }
 
         /// <summary>
@@ -73,7 +74,10 @@ namespace XamarinPrismMVVM.ViewModels
         private void Add()
         {
             this.Items.Add(new PhotoViewModel(this.repository.Items[this.items.Count]));
-            ((DelegateCommand)this.addCommand).RaiseCanExecuteChanged();
+
+            // Xamarin.Forms では Xamarin.Forms.Command の ChangeCanExecute しか反応してくれないらしい；
+            ((Command)this.addCommand).ChangeCanExecute();
+            ((Command)this.removeCommand).ChangeCanExecute();
         }
 
         /// <summary>
@@ -99,7 +103,7 @@ namespace XamarinPrismMVVM.ViewModels
         /// </summary>
         public ICommand RemoveCommand
         {
-            get { return this.removeCommand ?? (this.removeCommand = new DelegateCommand(this.Remove, this.CanRemove)); }
+            get { return this.removeCommand ?? (this.removeCommand = new Command(this.Remove, this.CanRemove)); }
         }
 
         /// <summary>
@@ -108,7 +112,10 @@ namespace XamarinPrismMVVM.ViewModels
         private void Remove()
         {
             this.Items.RemoveAt(this.items.Count - 1);
-            ((DelegateCommand)this.removeCommand).RaiseCanExecuteChanged();
+
+            // Xamarin.Forms では Xamarin.Forms.Command の ChangeCanExecute しか反応してくれないらしい；
+            ((Command)this.addCommand).ChangeCanExecute();
+            ((Command)this.removeCommand).ChangeCanExecute();
         }
 
         /// <summary>

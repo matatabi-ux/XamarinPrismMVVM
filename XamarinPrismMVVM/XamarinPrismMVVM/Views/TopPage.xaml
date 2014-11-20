@@ -13,7 +13,7 @@
   <StackLayout 
                Orientation="Vertical"
                Spacing="10">
-    <ListView ItemsSource="{Binding Items}" RowHeight="80">
+    <ListView ItemsSource="{Binding Items}" RowHeight="64">
       <ListView.ItemTemplate>
         <DataTemplate>
           <ViewCell>
