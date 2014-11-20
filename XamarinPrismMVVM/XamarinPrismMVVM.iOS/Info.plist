@@ -21,7 +21,7 @@
 		<string>UIInterfaceOrientationLandscapeRight</string>
 	</array>
 	<key>MinimumOSVersion</key>
-	<string>6.0</string>
+	<string></string>
 	<key>CFBundleDisplayName</key>
 	<string>MVVM Test</string>
 	<key>CFBundleIdentifier</key>
@@ -30,5 +30,11 @@
 	<string>1.0</string>
 	<key>CFBundleShortVersionString</key>
 	<string></string>
+	<key>CFBundleIconFiles</key>
+	<array>
+		<string>Icon@2x.png</string>
+		<string>Icon.png</string>
+		<string>Icon-60@2x.png</string>
+	</array>
 </dict>
 </plist>

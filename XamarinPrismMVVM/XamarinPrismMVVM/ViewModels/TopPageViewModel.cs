@@ -137,7 +137,6 @@ namespace XamarinPrismMVVM.ViewModels
         public TopPageViewModel(PhotoRepository repository)
         {
             this.repository = repository;
-            this.repository.Load();
 
             for (var i = 0; i < 3; i++)
             {
