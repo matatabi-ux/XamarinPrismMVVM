@@ -21,7 +21,7 @@
 		<string>UIInterfaceOrientationLandscapeRight</string>
 	</array>
 	<key>MinimumOSVersion</key>
-	<string></string>
+	<string>6.0</string>
 	<key>CFBundleDisplayName</key>
 	<string>MVVM Test</string>
 	<key>CFBundleIdentifier</key>
