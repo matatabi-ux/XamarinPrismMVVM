@@ -4,7 +4,7 @@
   <Languages xmlns="">
     <Language code="ja-JP" />
   </Languages>
-  <App xmlns="" ProductID="{91c33d1a-e4f2-4c18-9894-4a3033d8c079}" Title="XamarinPrismMVVM.WinPhone" RuntimeType="Silverlight" Version="1.0.0.0" Genre="apps.normal" Author="XamarinPrismMVVM.WinPhone author" Description="Sample description" Publisher="XamarinPrismMVVM.WinPhone" PublisherID="{41cfd28a-8ccf-4681-83a2-1b3b154d8b4c}">
+  <App xmlns="" ProductID="{91c33d1a-e4f2-4c18-9894-4a3033d8c079}" Title="MVVM Test" RuntimeType="Silverlight" Version="1.0.0.0" Genre="apps.normal" Author="matatabi-ux" Description="" Publisher="matatabi-ux" PublisherID="{41cfd28a-8ccf-4681-83a2-1b3b154d8b4c}">
     <IconPath IsRelative="true" IsResource="false">Assets\ApplicationIcon.png</IconPath>
     <Capabilities>
       <Capability Name="ID_CAP_NETWORKING" />
@@ -18,17 +18,26 @@
     </Tasks>
     <Tokens>
       <PrimaryToken TokenID="PhoneApp1Token" TaskName="_default">
-        <TemplateFlip>
-          <SmallImageURI IsRelative="true" IsResource="false">Assets\Tiles\FlipCycleTileSmall.png</SmallImageURI>
+        <TemplateIconic>
+          <SmallImageURI IsRelative="true" IsResource="false">Assets\Tiles\IconicTileSmall.png</SmallImageURI>
           <Count>0</Count>
-          <BackgroundImageURI IsRelative="true" IsResource="false">Assets\Tiles\FlipCycleTileMedium.png</BackgroundImageURI>
-          <Title>XamarinPrismMVVM.WinPhone</Title>
-          <BackContent></BackContent>
-          <BackBackgroundImageURI></BackBackgroundImageURI>
-          <BackTitle></BackTitle>
-          <DeviceLockImageURI></DeviceLockImageURI>
-          <HasLarge></HasLarge>
-        </TemplateFlip>
+          <IconImageURI IsRelative="true" IsResource="false">Assets\Tiles\IconicTileMediumLarge.png</IconImageURI>
+          <Title>
+          </Title>
+          <Message>
+          </Message>
+          <BackgroundColor>
+          </BackgroundColor>
+          <HasLarge>false</HasLarge>
+          <LargeContent1>
+          </LargeContent1>
+          <LargeContent2>
+          </LargeContent2>
+          <LargeContent3>
+          </LargeContent3>
+          <DeviceLockImageURI IsRelative="true" IsResource="false">
+          </DeviceLockImageURI>
+        </TemplateIconic>
       </PrimaryToken>
     </Tokens>
     <ScreenResolutions>
